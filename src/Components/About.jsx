@@ -4,6 +4,7 @@ import React from "react";
 import aboutImg from "../assets/About.png";
 import { motion } from "framer-motion";
 import { ABOUT_TEXT } from "../constants";
+import Attachments from "./Attachments";
 
 function About() {
   return (
@@ -29,8 +30,13 @@ function About() {
             transition={{ duration: 0.5 }}
             className="w-full lg:w-1/2"
           >
-            <div className="flex justify-center lg:justify-start">
-              <p className="my-2 max-w-xl py-6">{ABOUT_TEXT}</p>
+            <div className="flex flex-col justify-around lg:justify-start">
+              <div>
+                <p className="my-2 max-w-xl py-6">{ABOUT_TEXT}</p>
+              </div>
+              <div>
+                <Attachments />
+              </div>
             </div>
           </motion.div>
         </div>
